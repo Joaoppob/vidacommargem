@@ -1,0 +1,204 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+.hero-bg {
+  margin-top: 41px;
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  span.estrela {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 0px;
+    background: linear-gradient(to bottom, rgba(#999999, 0) 10%, #fff 100%);
+    border-radius: 5px;
+    z-index: 0;
+    rotate: -45deg;
+    animation: cairEstrela 6s linear infinite;
+    opacity: 0;
+    top: 5%;
+    left: 10%;
+
+    &:nth-child(1) {
+      top: 5%;
+      left: 28%;
+      height: 280px;
+    }
+    &:nth-child(3) {
+      top: 15%;
+      left: 50%;
+      height: 240px;
+    }
+    &:nth-child(2) {
+      top: 3%;
+      left: 65%;
+      height: 140px;
+    }
+    &:nth-child(5) {
+      top: 8%;
+      left: 80%;
+      height: 200px;
+    }
+    &:nth-child(6) {
+      top: 35%;
+      left: 10%;
+      height: 220px;
+    }
+    &:nth-child(4) {
+      top: 45%;
+      left: 28%;
+      height: 180px;
+    }
+    &:nth-child(7) {
+      top: 60%;
+      left: 85%;
+      height: 190px;
+    }
+    &:nth-child(8) {
+      top: 60%;
+      left: 62%;
+      height: 210px;
+    }
+
+    &:nth-child(odd) {
+      animation-duration: 3s;
+      animation-delay: 1s;
+    }
+    &:nth-child(even) {
+      animation-duration: 4s;
+      animation-delay: 2s;
+    }
+    &:nth-child(3n) {
+      animation-duration: 5s;
+      animation-delay: 3s;
+    }
+  }
+}
+@keyframes cairEstrela {
+  0% {
+    transform: translateY(-420px) scaleY(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(420px) scaleY(0);
+    opacity: 0;
+  }
+}
+
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 976px;
+  margin: 0 auto;
+  width: 80%;
+  flex-flow: column wrap;
+
+  @include respond-to("md") {
+    justify-content: flex-end;
+    width: 90%;
+  }
+
+  @include respond-to("lg") {
+    width: 100%;
+  }
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+.hero {
+  max-width: 976px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 32px;
+    font-family: $fonteDefault;
+    color: $fonteLight;
+    margin-bottom: 8px;
+
+    @include respond-to("md") {
+      margin-bottom: initial;
+      font-size: 56px;
+    }
+    @include respond-to("lg") {
+      font-size: 88px;
+    }
+    & span {
+      color: $cor0;
+      white-space: initial;
+
+      @include respond-to("sm") {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    font-family: $fonteAuxiliar;
+    color: $fonteLight;
+    font-weight: 500;
+
+    @include respond-to("md") {
+      font-size: 24px;
+    }
+    @include respond-to("lg") {
+      font-size: 32px;
+    }
+
+    & span {
+      color: $cor0;
+      white-space: nowrap;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 120px;
+    position: relative;
+    top: 0; // sobe um pouco o personagem
+    right: 0;
+    z-index: 1;
+    margin-bottom: 16px;
+
+    @include respond-to("sm") {
+      max-width: 150px;
+      margin-bottom: initial;
+    }
+
+    @include respond-to("md") {
+      align-self: flex-end;
+      position: absolute;
+      top: -90%; // sobe um pouco o personagem
+      right: 0%;
+      max-width: 200px;
+    }
+    @include respond-to("lg") {
+      top: -72%; // sobe um pouco o personagem
+      right: 8%;
+      max-width: 230px;
+    }
+  }
+}

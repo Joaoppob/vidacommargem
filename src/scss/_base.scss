@@ -1,0 +1,15 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+#app {
+  padding: 1rem 2rem;
+  background: color.scale($bgLight, $lightness: -5.5%);
+  color: $fonteDark;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 57px auto 0 auto;
+}

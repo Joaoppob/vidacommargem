@@ -1,0 +1,213 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+/* Cabeçalho */
+header {
+  position: fixed;
+  top: 10;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: $bgDark;
+  transition: border-bottom 0.5s ease, top 0.5s ease;
+  border-bottom: 2px solid $fonteLight;
+  z-index: 9999;
+}
+.fixed_navBar {
+  border-bottom: none;
+  top: 8px;
+  background: none;
+}
+
+.nav_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0px;
+  transition: padding 0.5s ease;
+  max-width: 976px;
+  margin: 0 auto;
+  width: calc(80% - 32px);
+
+  .logoDesk {
+    display: none;
+    transition: transform 0.5s ease;
+
+    & img {
+      width: 100%;
+      max-width: 210px;
+    }
+    @include respond-to("md") {
+      display: block;
+    }
+  }
+  .logoMobile {
+    display: block;
+    transition: transform 0.5s ease;
+
+    & img {
+      width: 100%;
+      max-width: 24px;
+    }
+    @include respond-to("md") {
+      display: none;
+    }
+  }
+
+  @include respond-to("md") {
+    width: 90%;
+  }
+
+  @include respond-to("lg") {
+    width: 100%;
+  }
+}
+
+.fixed_navBar .nav_flex {
+  padding: 8px 16px;
+  border: 2px solid $fonteLight;
+  background: $bgDark;
+  border-radius: $raioDefault;
+}
+
+.fixed_navBar .logo {
+  transform: scale(0.8);
+}
+
+.fonte-serifada {
+  font-family: $fonteAuxiliar; // Ou 'DM Serif Display', serif;
+}
+
+.nav-desktop {
+  display: none;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+
+  @include respond-to("md") {
+    display: flex;
+    width: 55%;
+  }
+  @include respond-to("lg") {
+    width: 50%;
+  }
+}
+
+.nav-link {
+  font-size: 16px; // ajustável
+  display: grid;
+  cursor: pointer;
+  margin: 0 auto;
+
+  & .texto {
+    grid-area: 1 / 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: block;
+    color: $fonteLight;
+  }
+
+  & .texto p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  & .texto:nth-child(1) {
+    font-family: $fonteDefault, serif;
+    font-weight: 500;
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+    backface-visibility: hidden;
+  }
+
+  & .texto:nth-child(2) {
+    font-family: $fonteAuxiliar, serif;
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    backface-visibility: hidden;
+  }
+
+  &:hover .texto:nth-child(1) {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+
+  &:hover .texto:nth-child(2) {
+    opacity: 1;
+    transform: rotateX(0deg);
+    color: $cor0;
+  }
+}
+
+.nav-mobile {
+  display: flex;
+  width: 12%;
+  justify-content: flex-end;
+
+  & .nav-mobileButton {
+    & svg {
+      max-width: 36px;
+      width: 100%;
+      height: 100%;
+      stroke: $fonteLight;
+      transition: all 0.3s ease;
+      &.nav-close {
+        max-width: 24px;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        stroke: $cor0;
+      }
+    }
+  }
+
+  @include respond-to("md") {
+    display: none;
+  }
+}
+
+.nav-mobileWrapper {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  row-gap: 32px;
+  top: 0px;
+  left: 600px;
+  right: 0;
+  bottom: 0;
+  background: $bgDark;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s ease;
+
+  @include respond-to("sm") {
+    left: 1000px;
+  }
+
+  & .nav-link {
+    min-width: 90px;
+  }
+  &.active {
+    display: flex;
+    left: 0;
+
+    @include respond-to("md") {
+      display: none;
+    }
+  }
+}
+
+#scroll-trigger {
+  height: 1px;
+  width: 100%;
+}

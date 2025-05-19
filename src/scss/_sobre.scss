@@ -1,0 +1,103 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+.sobre-wrapper {
+  max-width: 976px;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 32px 0 32px 0;
+
+  @include respond-to("sm") {
+    padding: 128px 0 32px 0;
+  }
+
+  @include respond-to("md") {
+    width: 90%;
+  }
+
+  @include respond-to("lg") {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-family: $fonteDefault;
+    color: $fonteLight;
+    text-align: center;
+    margin-bottom: 32px;
+    text-shadow: 0 -16px 0px #2c2c2c;
+
+    @include respond-to("md") {
+      text-shadow: 0 -32px 0px #2c2c2c;
+      font-size: 56px;
+      margin-bottom: 128px;
+    }
+    @include respond-to("lg") {
+      font-size: 88px;
+    }
+
+    & span {
+      color: $cor0;
+      white-space: nowrap;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    font-family: $fonteDefault;
+    color: $cor0;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 16px;
+    font-family: $fonteAuxiliar;
+    color: $fonteLight;
+    font-weight: 500;
+    margin-bottom: 16px;
+    text-indent: 5%;
+
+    @include respond-to("md") {
+      font-size: 22px;
+    }
+
+    & span {
+      color: $cor0;
+      white-space: nowrap;
+    }
+  }
+
+  .missao-img-mascara {
+    position: relative;
+    width: 100%;
+    height: 200px; // altura do "crop"
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    @include respond-to("md") {
+      height: 400px; // altura do "crop"
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      transform: translateY(0);
+      transition: transform 0.1s ease-out;
+      will-change: transform;
+    }
+  }
+}
+
+.missao-flex {
+  border-bottom: 1px solid $fonteLight;
+  margin-bottom: 16px;
+}
+
+.construcao-flex {
+  margin-bottom: 16px;
+}

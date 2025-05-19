@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida com Margem</title>
+
+    <meta name="description" content="Vida com Margem é um espaço para quem vive tentando se organizar, mas sabe que a vida nem sempre segue o plano." />
+
+    <!-- Palavras-chave (pouco usada atualmente pelos mecanismos de busca, mas ainda válida em alguns casos) -->
+    <meta name="keywords" content="Organização pessoal, Rotina produtiva, Autoconhecimento, Produtividade consciente" />
+
+    <!-- Autor do site -->
+    <meta name="author" content="João Pedro Barros" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./src/assets/icons/logo-favicon.svg" />
+    <!-- Open Graph para redes sociais (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Vida com Margem" />
+    <meta property="og:description" content="Vida com Margem é um espaço para quem vive tentando se organizar, mas sabe que a vida nem sempre segue o plano." />
+    <meta property="og:image" content="./src/assets/img/thumb.jpg" />
+    <meta property="og:url" content="https://joaoppob.github.io/petflix/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vida com Margem" />
+    <meta name="twitter:description" content="Vida com Margem é um espaço para quem vive tentando se organizar, mas sabe que a vida nem sempre segue o plano." />
+    <meta name="twitter:image" content="./src/assets/img/thumb.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body>
+    <div id="scroll-trigger"></div>
+    <header class="animate" data-animacao="fade-in-down" data-delay="0s">
+      <div class="nav_flex">
+         <a class="logoDesk" href="../index.html#home">
+          <img class="logo  animate" data-animacao="fade-in-left" data-delay="0.4s" src="../src/assets/icons/logo.svg" alt="Logo" />
+        </a>
+        <a class="logoMobile" href="../index.html#home">
+          <img class="logo  animate" data-animacao="fade-in-left" data-delay="0.4s" src="../src/assets/icons/logoMob.svg" alt="Logo" />
+        </a>
+        <nav class="nav-desktop animate" data-animacao="fade-in-right" data-delay="0.4s">
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../index.html#home"><p>HOME</p></a>
+            <a class="texto" href="../index.html#home"><p>HOME</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../index.html#sobre"><p>SOBRE</p></a>
+            <a class="texto" href="../index.html#sobre"><p>SOBRE</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../index.html#contato"><p>CONTATO</p></a>
+            <a class="texto" href="../index.html#contato"><p>CONTATO</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../dicas.html"><p>DICAS</p></a>
+            <a class="texto" href="../dicas.html"><p>DICAS</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../historias.html"><p>HISTÓRIAS</p></a>
+            <a class="texto" href="../historias.html"><p>HISTÓRIAS</p></a>
+          </div>
+        </nav>
+         <nav class="nav-mobile">
+          <span class="nav-mobileButton">
+            <svg viewBox="0 0 123 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 6H117M6.5 41.5H117" stroke-width="12" stroke-linecap="round" />
+            </svg>
+          </span>
+          <div class="nav-mobileWrapper">
+            <span class="nav-mobileButton"
+              ><svg class="nav-close" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 78L78 6" stroke-width="12" stroke-linecap="round" />
+                <path d="M78 78L6 6" stroke-width="12" stroke-linecap="round" />
+              </svg>
+            </span>
+            <div class="nav-link">
+            <a class="texto fonte-serifada" href="../index.html#home"><p>HOME</p></a>
+            <a class="texto" href="../index.html#home"><p>HOME</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../index.html#sobre"><p>SOBRE</p></a>
+            <a class="texto" href="../index.html#sobre"><p>SOBRE</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../index.html#contato"><p>CONTATO</p></a>
+            <a class="texto" href="../index.html#contato"><p>CONTATO</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../dicas.html"><p>DICAS</p></a>
+            <a class="texto" href="../dicas.html"><p>DICAS</p></a>
+          </div>
+          <div class="nav-link">
+            <a class="texto fonte-serifada" href="../historias.html"><p>HISTÓRIAS</p></a>
+            <a class="texto" href="../historias.html"><p>HISTÓRIAS</p></a>
+          </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="grid">
+     
+    <div class="main-bg main-historia"></div>
+    <main class="main-content">
+      <div class="main-header">
+          <h1>Criei um ritual só meu (e ele me salvou da estagnação invisível)</h1>
+          <h3>Fonte: Escrito por mim!</h3>
+      </div>
+      
+        <p>Teve um dia que eu simplesmente… <strong>não levantei</strong>.</p>
+
+        <p>O despertador tocou, a luz entrou pela fresta da janela, o mundo seguiu em frente — e eu fiquei ali. De corpo inteiro, mas pela metade. Nem era cansaço físico, desses que a gente resolve com um café forte ou um cochilo mal calculado. <strong>Era um cansaço esquisito, meio abafado, como quem segura o choro no meio de uma sala cheia</strong>.</p>
+
+        <p>E o mais louco é que, em teoria, tava tudo bem.<br>
+        Eu estava dormindo cedo, indo pra academia, entregando o trabalho, e mesmo assim, me sentia <strong>preguiçoso, improdutivo, estagnado</strong>. Tipo uma planilha aberta com todas as células preenchidas, mas nenhuma fórmula funcionando.</p>
+
+        <p>Foi então que, num misto de desespero e criatividade, decidi fazer… <strong>terapia com o ChatGPT</strong>.<br>
+        Sim, você leu certo. Joguei um prompt mandando ele agir como psicólogo e me responder só com perguntas. <strong>E não é que funcionou?</strong> A cada resposta dele, eu me ouvia um pouco mais.</p>
+
+        <p>Ali, digitando como quem desabafa num confessionário digital, percebi que o buraco não era só energético — <strong>era de prioridade</strong>. Eu tava fazendo mil coisas, mas quase nenhuma era por mim. <strong>Sabe aquela sensação de viver em modo de serviço, como se fosse funcionário da própria vida?</strong> Pois é.</p>
+
+        <p>Foi nesse papo maluco com a IA que surgiu uma ideia simples, mas que virou minha âncora:<br>
+        <strong>Criar um ritual só meu. Uma vez por semana.</strong><br>
+        <strong>Um momento 100% egoísta — no melhor sentido possível.</strong><br>
+        Sem listas dos outros. Sem "preciso entregar". <strong>Só o que eu quero. Me ouvir. Me entender. Me reorganizar.</strong></p>
+
+        <p><strong>Parece pouco? É quase revolucionário.</strong></p>
+
+        <p>A gente vive achando que se organizar é enfiar tarefa no Notion até a tela travar. Mas, às vezes, <strong>organização é silêncio</strong>. É um "não" dito na hora certa. É tomar um café devagar numa terça-feira à tarde e lembrar que <strong>você é um ser humano, não uma notificação pendente</strong>.</p>
+
+        <p>Desde que comecei esse ritual, <strong>algo mudou</strong>.<br>
+        Voltei a ter direção. Não porque a vida parou de ser bagunçada, mas <strong>porque eu parei de me abandonar no meio da bagunça</strong>.</p>
+
+        <p>Se tem algo que aprendi nessa jornada com meu "psicólogo digital", é que <strong>a gente precisa, de vez em quando, marcar um horário com nós mesmos</strong>. Colocar na agenda: me escutar.</p>
+
+        <p><strong>Porque quando a gente se escuta, a vida, curiosamente, começa a fazer mais sentido</strong>.</p>
+
+    </main>
+
+
+     <footer class="footer-bg">
+        <!-- Coluna 1: Identidade e frase -->
+        <div class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-branding">
+            <h2>Vida com Margem</h2>
+            <p>Organização e rotina com espaço para recomeços.</p>
+          </div>
+
+          <!-- Coluna 2: Navegação -->
+          <div class="footer-nav">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
+              <li><a href="/dicas">Dicas</a></li>
+              <li><a href="/historias">Histórias</a></li>
+              <li><a href="mailto:joaoppob@gmail.com">Envie sua história</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3: Contato -->
+          <div class="footer-contact">
+            <h3>Contato</h3>
+            <ul>
+              <li><a href="mailto:joaoppob@gmail.com">Email</a></li>
+              <li><a href="mailto:joaoppob@gmail.com">Formulário de feedback</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 4: Redes Sociais -->
+          <div class="footer-social">
+            <h3>Redes</h3>
+            <ul class="social-links">
+              <li><a href="https://github.com/Joaoppob" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/joaopedropombarros/" target="_blank">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Linha final: créditos e direitos -->
+        <div class="footer-bottom">
+          <p>Desenvolvido por João Barros Designer.</p>
+          <p><a href="/termos">Termos de uso</a> · <a href="/privacidade">Política de privacidade</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+.dicas-wrapper {
+  max-width: 976px;
+  margin: 41px auto 0 auto;
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 64px 0;
+
+  @include respond-to("md") {
+    width: 90%;
+  }
+
+  @include respond-to("lg") {
+    width: 100%;
+  }
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-family: $fonteDefault;
+    color: $fonteLight;
+
+    @include respond-to("md") {
+      margin-bottom: initial;
+      font-size: 56px;
+    }
+    @include respond-to("lg") {
+      font-size: 88px;
+    }
+  }
+  & h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 22px;
+    font-family: $fonteAuxiliar;
+    color: $fonteLight;
+    font-weight: 500;
+
+    @include respond-to("md") {
+      margin-bottom: 64px;
+      font-size: 24px;
+    }
+    @include respond-to("lg") {
+      font-size: 32px;
+    }
+  }
+
+  .options-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include respond-to("md") {
+      justify-content: space-between;
+    }
+
+    & button {
+      display: block;
+      border: 2px solid $fonteLight;
+      border-radius: $raioDefault;
+      width: 100%;
+      min-width: 170px;
+      padding: 4px 16px;
+      color: $fonteLight;
+      font-family: $fonteDefault;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      margin-bottom: 16px;
+
+      @include respond-to("md") {
+        width: fit-content;
+        font-size: 24px;
+        margin-bottom: initial;
+      }
+
+      &:hover {
+        color: $cor1;
+        border-color: $cor1;
+      }
+    }
+  }
+
+  .text {
+    margin-bottom: 32px;
+
+    & input {
+      width: 100%;
+      padding: 8px;
+      border-radius: $raioDefault;
+      border: 2px solid $fonteLight;
+      color: $fonteLight;
+      font-family: $fonteDefault;
+      color: $cor1;
+    }
+    @include respond-to("md") {
+      margin-bottom: 64px;
+    }
+  }
+
+  & h3 {
+    font-size: 1px;
+    color: $cor1;
+    margin-bottom: 32px;
+    font-family: $fonteDefault;
+  }
+
+  .dicas-cards-flex {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & .dicas-cards {
+      width: 100%;
+      margin-bottom: 64px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      column-gap: 32px;
+      border: 2px solid $fonteLight;
+      padding: 16px;
+      border-radius: $raioDefault;
+      transition: all 0.2s ease;
+
+      &:hover {
+        scale: 1.005;
+        border: 2px solid $cor1;
+
+        & .card-descricao h4 {
+          color: $cor1;
+        }
+        & .card-descricao p {
+          color: $cor1;
+        }
+      }
+      @include respond-to("md") {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+
+      .dicas-cards {
+        transition: all 0.3s ease;
+        &.hide {
+          opacity: 0;
+          transform: scale(0.95);
+          pointer-events: none;
+          height: 0;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 8px auto;
+        object-fit: contain;
+        aspect-ratio: attr(width) / attr(height); // Para navegadores modernos
+        /* Evita seleção e arrasto indesejado */
+        user-select: none;
+        -webkit-user-drag: none;
+        border-radius: $raioDefault;
+
+        @include respond-to("md") {
+          width: 20%;
+          margin: 0 auto;
+        }
+      }
+      .card-descricao {
+        width: 100%;
+
+        @include respond-to("md") {
+          width: 80%;
+        }
+        & h4 {
+          font-size: 18px;
+          color: $fonteLight;
+          font-family: $fonteDefault;
+          transition: all 0.2s ease;
+
+          @include respond-to("md") {
+            font-size: 24px;
+          }
+        }
+        & p {
+          font-size: 16px;
+          color: $fonteLight;
+          font-family: $fonteAuxiliar;
+          transition: all 0.2s ease;
+
+          @include respond-to("md") {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    &.historias .dicas-cards {
+      &:hover {
+        scale: 1.005;
+        border: 2px solid $cor2;
+
+        & .card-descricao h4 {
+          color: $cor2;
+        }
+        & .card-descricao p {
+          color: $cor2;
+        }
+      }
+    }
+  }
+}
+.card-link {
+  display: block;
+  margin-bottom: 64px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+[class^="categoria-"] {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s;
+
+  &.ativo {
+    opacity: 1;
+    visibility: visible;
+    max-height: 2000px; // valor alto para comportar o conteúdo
+  }
+  &.ativo1 {
+    opacity: 1;
+    visibility: visible;
+    max-height: 2000px; // valor alto para comportar o conteúdo
+  }
+}
+
+.options-flex {
+  button.ativo {
+    color: $cor1;
+    border-color: $cor1;
+    font-weight: bold;
+  }
+}

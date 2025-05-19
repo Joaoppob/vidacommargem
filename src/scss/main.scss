@@ -1,0 +1,31 @@
+@use "./core/core" as *;
+@use "sass:color";
+@use "nav";
+@use "hero";
+@use "seta";
+@use "sobre";
+@use "contato";
+@use "footer";
+@use "base";
+@use "hero-dicas";
+@use "historias";
+@use "materia";
+
+body {
+  background-color: $bgDark;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+.grid {
+  width: calc(100% - 32px);
+  margin: 0px auto 0 auto;
+  border-left: 2px solid $fonteLight;
+  border-right: 2px solid $fonteLight;
+  padding: 1px 0 0 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

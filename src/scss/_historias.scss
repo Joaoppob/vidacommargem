@@ -1,0 +1,31 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+.dicas-wrapper .historias-options-flex {
+  margin: 0 auto 64px auto;
+
+  & button {
+    color: $fonteLight;
+
+    @include respond-to("md") {
+      width: fit-content;
+      font-size: 24px;
+      margin-bottom: initial;
+    }
+    &:hover {
+      color: $cor2;
+      border-color: $cor2;
+    }
+  }
+
+  & button.ativo {
+    color: $fonteLight;
+    border-color: $fonteLight;
+    font-weight: bold;
+
+    &:hover {
+      color: $cor2;
+      border-color: $cor2;
+    }
+  }
+}

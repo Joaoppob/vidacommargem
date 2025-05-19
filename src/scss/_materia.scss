@@ -1,0 +1,104 @@
+@use "./core/core" as *;
+@use "sass:color";
+
+.main-bg {
+  width: 100%;
+  height: 100px;
+  background-color: $cor1;
+}
+
+.main-dica {
+  background-color: $cor1;
+}
+.main-historia {
+  background-color: $cor2;
+}
+.main-content {
+  max-width: 720px;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 32px 0 128px 0;
+
+  & .main-header {
+    margin-bottom: 64px;
+  }
+
+  @include respond-to("md") {
+    width: 90%;
+  }
+
+  @include respond-to("lg") {
+    width: 100%;
+  }
+
+  & h1 {
+    font-size: 32px;
+    font-family: $fonteDefault;
+    color: $fonteLight;
+    margin-bottom: 16px;
+
+    @include respond-to("md") {
+      font-size: 56px;
+    }
+    @include respond-to("lg") {
+      font-size: 56px;
+    }
+  }
+  & h2 {
+    font-size: 32px;
+    color: $fonteLight;
+    text-align: center;
+    margin-bottom: 64px;
+    font-family: $fonteAuxiliar;
+    font-weight: normal;
+  }
+  & h3 {
+    font-size: 12px;
+    color: $fonteLight;
+    font-family: $fonteDefault;
+  }
+
+  & p {
+    font-size: 16px;
+    color: $fonteLight;
+    font-family: $fonteAuxiliar;
+    margin-bottom: 16px;
+
+    @include respond-to("md") {
+      font-size: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & a {
+      color: $fonteLight;
+      text-decoration: underline;
+      text-decoration-color: $fonteLight;
+
+      &:hover {
+        color: #fff;
+        text-decoration-color: #fff;
+      }
+    }
+  }
+
+  & h4 {
+    font-family: $fonteDefault;
+    color: $fonteLight;
+  }
+
+  & ul li {
+    color: $fonteLight;
+    font-family: $fonteDefault;
+    list-style-type: circle;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+}

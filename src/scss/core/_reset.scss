@@ -1,0 +1,125 @@
+/* RESET CSS - Completo e Moderno */
+
+/* 1. Zera margens, paddings e bordas padrão */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+/* 2. Remove listas padrão */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 3. Remove estilos padrão de links */
+a {
+  text-decoration: none;
+  // color: inherit;
+}
+
+/* 4. Ajusta tipografia base */
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+  color: #000;
+}
+
+/* 5. Corrige imagens */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Reseta campos de formulário */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* 7. Remove efeitos padrão em botões */
+button {
+  cursor: pointer;
+  background: none;
+}
+
+/* 8. Remoção de estilo de citação */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* 10. HTML5 display-role reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* 11. Garante altura mínima */
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 12. Remove scroll bounce (iOS) */
+body {
+  overscroll-behavior: none;
+}
+
+/* 13. Remove outline de foco automático no Chrome */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/* 14. Normaliza tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 15. Evita quebra de layout por palavras muito longas */
+* {
+  word-wrap: break-word;
+}
+
+/* 16. Customiza seleção */
+::selection {
+  background-color: #000;
+  color: #fff;
+}
