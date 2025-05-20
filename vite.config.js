@@ -4,7 +4,7 @@ import path from 'path';
 import { imagetools } from 'vite-imagetools';
 
 export default defineConfig({
-    base: '/projeto/',
+    base: '/vidacommargem/',
     server: {
         port: 3000,
         open: true, // ← Isso aqui abre o navegador automaticamente
