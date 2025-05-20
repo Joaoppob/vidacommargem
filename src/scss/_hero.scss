@@ -11,6 +11,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  padding: 0 0 56px 0;
 
   span.estrela {
     position: absolute;
@@ -105,7 +106,7 @@
   align-items: center;
   justify-content: center;
   max-width: 976px;
-  margin: 0 auto;
+  margin: 0 auto 0px auto;
   width: 80%;
   flex-flow: column wrap;
 
@@ -123,7 +124,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 64px;
 }
 .hero {
   max-width: 976px;
@@ -160,6 +160,7 @@
     font-family: $fonteAuxiliar;
     color: $fonteLight;
     font-weight: 500;
+    margin-bottom: 16px;
 
     @include respond-to("md") {
       font-size: 24px;
@@ -191,14 +192,46 @@
     @include respond-to("md") {
       align-self: flex-end;
       position: absolute;
-      top: -90%; // sobe um pouco o personagem
-      right: 0%;
+      top: -75%; // sobe um pouco o personagem
+      left: 55%;
       max-width: 200px;
     }
     @include respond-to("lg") {
-      top: -72%; // sobe um pouco o personagem
-      right: 8%;
-      max-width: 230px;
+      top: -45%; // sobe um pouco o personagem
+      left: initial;
+      right: 12%;
+      max-width: 200px;
+    }
+  }
+  & .ctas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16px;
+
+    & .cta {
+      & button {
+        padding: 4px 16px;
+        font-family: $fonteDefault;
+        color: $fonteLight;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        border: 2px solid $fonteLight;
+        border-radius: $raioDefault;
+
+        @include respond-to("md") {
+          width: fit-content;
+          font-size: 24px;
+          margin-bottom: initial;
+        }
+
+        &:hover {
+          font-weight: bold;
+          color: $cor0;
+          border-color: $cor0;
+        }
+      }
     }
   }
 }
